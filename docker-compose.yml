@@ -1,0 +1,9 @@
+reverse-proxy:
+    build: .
+    container_name: reverse-proxy
+    ports:
+        - "80:80"
+    hostname: reverse-proxy
+    volumes:
+        - /var/run/docker.sock:/tmp/docker.sock:ro
+    restart: always
